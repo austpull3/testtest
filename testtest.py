@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 import pyodbc
 def main_page():
     st.title('Rental Equipment Correlation Analysis')    
