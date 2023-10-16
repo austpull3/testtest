@@ -6,7 +6,7 @@ def main_page():
     # Initialize connection.
     def init_connection():
         return pyodbc.connect(
-            "DRIVER={SQL Server};SERVER="
+            "DRIVER={ODBC SQL Server};SERVER="
             + st.secrets["server"]
             + ";DATABASE="
             + st.secrets["database"]
