@@ -4,7 +4,7 @@ def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import pandas as pd
     # Initialize connection.
- 
+    server = 'HOWE-ACCT-SERV\SAGE300CRE'
         # Create a connection string
     connection_string = f"DRIVER=SQL Server;SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
