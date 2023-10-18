@@ -4,31 +4,17 @@ def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import pandas as pd
     # Initialize connection.
-    def init_connection():
-        return pyodbc.connect(
-            "DRIVER={Timberline Data};SERVER="
-            + st.secrets["server"]
-            + ";DATABASE="
-            + st.secrets["database"]
-            + ";UID="
-            + st.secrets["username"]
-            + ";PWD="
-            + st.secrets["password"]
-        )
+ 
+        # Create a connection string
+    connection_string = f"DRIVER=SQL Server;SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
-    conn = init_connection()
+    # Establish a connection
+    conn = pyodbc.connect(connection_string)
     
-    # Perform query.
-    def run_query(query):
-        with conn.cursor() as cur:
-            cur.execute(query)
-            return cur.fetchall()
+    cursor = conn.cursor()
     
-    rows = run_query("SELECT Job from JCM_MASTER__JOB;")
-    
-    # Print results.
-    for row in rows:
-        st.write(f"{row[0]} has a :{row[1]}:")
+    query = "USE [HoweInc]"
+    result = cursor.execute(query)
 def page2():
     st.title("Exploratory Data Analysis")
 #dict for pages
