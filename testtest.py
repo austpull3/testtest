@@ -9,7 +9,7 @@ def main_page():
     username = 'AUSTINP'
     password = 'PULLAR'
         # Create a connection string
-    connection_string = f"DRIVER=Timberline Data;SERVER={server};DATABASE={database};UID={username};PWD={password}"
+    connection_string = f"DRIVER=SQL Server;SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
     # Establish a connection
     conn = pyodbc.connect(connection_string)
