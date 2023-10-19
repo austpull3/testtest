@@ -3,21 +3,30 @@ import pyodbc
 def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import pandas as pd
-    # Initialize connection.
-    server = 'HOWE-ACCT-SERV\SAGE300\Data\HOWE'
-    database = 'HoweInc' 
-    username = 'AUSTINP'
-    password = 'PULLAR'
-        # Create a connection string
-    connection_string = f"DRIVER=SQL Server;SERVER={server};DATABASE={database};UID={username};PWD={password}"
+    def init_connection():
+        return pyodbc.connect(
+            "DRIVER={SQL Server};SERVER="
+            + st.secrets["server"]
+            + ";DATABASE="
+            + st.secrets["database"]
+            + ";UID="
+            + st.secrets["username"]
+            + ";PWD="
+            + st.secrets["password"]
+        )
     
-    # Establish a connection
-    conn = pyodbc.connect(connection_string)
+    conn = init_connection()
     
-    cursor = conn.cursor()
+    def run_query(query):
+        with conn.cursor() as cur:
+            cur.execute(query)
+            return cur.fetchall()
     
-    query = "USE [HoweInc]"
-    result = cursor.execute(query)
+    rows = run_query("SELECT * from mytable;")
+    
+    # Print results.
+    for row in rows:
+        st.write(f"{row[0]} has a :{row[1]}:")
 def page2():
     st.title("Exploratory Data Analysis")
 #dict for pages
