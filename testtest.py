@@ -5,9 +5,9 @@ def main_page():
     import pandas as pd
     # Initialize connection.
     server = 'HOWE-ACCT-SERV\SAGE300\Data\HOWE'
-    database = 'HOWE - LIVE TIMBERLINE' 
-    username = 'sa'
-    password = 'L+S3jr3fP@*1'
+    database = 'HoweInc' 
+    username = 'AUSTINP'
+    password = 'PULLAR'
         # Create a connection string
     connection_string = f"DRIVER=Timberline Data;SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
