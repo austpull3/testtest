@@ -2,8 +2,6 @@ import streamlit as st
 import pyodbc
 def main_page():
     st.title('Rental Equipment Correlation Analysis')    
-    import pandas as pd
-    import streamlit as st
     import numpy as np
     import pandas as pd
     from sqlalchemy import create_engine
