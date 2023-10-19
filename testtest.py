@@ -4,7 +4,7 @@ def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import pandas as pd
     # Initialize connection.
-    server = 'HOWE-ACCT-SERV\SAGE300\Data\HOWE\'
+    server = 'HOWE-ACCT-SERV\SAGE300\Data\HOWE'
     database = 'HoweInc'
     username = 'sa'
     password = 'L+S3jr3fP@*1'
