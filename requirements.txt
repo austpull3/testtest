@@ -2,6 +2,6 @@ streamlit
 pyodbc
 numpy
 pandas
-sqlalchemy
+SQLAlchemy
 sklearn
 pymysql
