@@ -1,2 +1,7 @@
 streamlit
 pyodbc
+numpy
+pandas
+sqlalchemy
+sklearn
+pymysql
