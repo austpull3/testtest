@@ -4,7 +4,7 @@ def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import numpy as np
     import pandas as pd
-    from sqlalchemy import create_engine
+    from SQLAlchemy import create_engine
     from sklearn.neighbors import NearestNeighbors
     import pyodbc
     import pymysql
