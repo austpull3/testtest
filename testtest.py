@@ -8,6 +8,8 @@ def main_page():
     from sklearn.neighbors import NearestNeighbors
     import pyodbc
     import pymysql
+
+
 def page2():
     st.title("Exploratory Data Analysis")
 #dict for pages
