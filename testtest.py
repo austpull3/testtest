@@ -4,11 +4,8 @@ def main_page():
     st.title('Rental Equipment Correlation Analysis')    
     import numpy as np
     import pandas as pd
-    from SQLAlchemy import create_engine
-    from sklearn.neighbors import NearestNeighbors
     import pyodbc
-    import pymysql
-    
+
 def page2():
     st.title("Exploratory Data Analysis")
 #dict for pages
