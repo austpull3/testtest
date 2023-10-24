@@ -8,6 +8,7 @@ def main_page():
 
 def page2():
     st.title("Exploratory Data Analysis")
+    st.dataframe()
 #dict for pages
 page_names_to_funcs = {
     "Welcome Page": main_page,
