@@ -3,5 +3,5 @@ pyodbc
 numpy
 pandas
 SQLAlchemy
-sklearn
+scikit-learn
 pymysql
