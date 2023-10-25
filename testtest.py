@@ -10,17 +10,17 @@ def page2():
     st.title("Exploratory Data Analysis")
     st.dataframe()
     
-''' server = 'HOWE-ACCT-SERV\SAGE300CRE'
+server = 'HOWE-ACCT-SERV\SAGE300CRE'
 database = 'HoweInc'
 username = 'sa'
 password = 'L+S3jr3fP@*1'
-'''
+
     
 # Create a connection string
 #connection_string = f"DRIVER={SQL Server};SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
 # Establish a connection
-conn = pyodbc.connect(driver = '{ODBC Driver 13 for SQL Server}', server = 'HOWE-ACCT-SERV\SAGE300CRE', database = 'HoweInc', uid = 'sa', password = 'L+S3jr3fP@*1') 
+conn = pyodbc.connect(driver = {SQL Server}, server = {server}, database = {database}, uid = {username}, password = {password}) 
     
 cursor = conn.cursor()
     
