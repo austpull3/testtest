@@ -20,7 +20,7 @@ password = 'L+S3jr3fP@*1'
 #connection_string = f"DRIVER={SQL Server};SERVER={server};DATABASE={database};UID={username};PWD={password}"
     
 # Establish a connection
-conn = pyodbc.connect(driver = '{SQL Server}', server = {server}, database = {database}, uid = {username}, password = {password}) 
+conn = pyodbc.connect(server = {server}, database = {database}, uid = {username}, password = {password}) 
     
 cursor = conn.cursor()
     
